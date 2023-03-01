@@ -1,0 +1,265 @@
+html, body {
+    margin: 0;
+    font-family: 'Rowdies', sans-serif;}
+
+:root {
+    --blue-main: #006F9E;
+    --blue-light: #bbebff;
+    --pink-main: #CB48B7;
+    --pink-light: #ffc8f7;
+    --background: #E7E6F7;
+    --text-light: #f5f5f5;
+    --text-dark: #2B2E2F;
+    --box-shadow-dark: inset -2px -2px 3px #656565, inset 2px 3px 3px #DADBDF;;
+
+}
+
+/*typography*/
+
+h1, h2, h3{
+    text-align: center;
+}
+
+h1, h3{
+    color: var(--text-light);
+    margin: 0;
+}
+
+h1{
+    font-size: 32px;
+}
+h2 {
+    font-size: 26px;
+    margin: 20px;
+}
+h3 h4 {
+    font-size: 18px
+}
+.container {
+    width: 520px;
+    margin: auto;
+    background-color: var(--background);
+}
+
+
+/* layout */
+
+header{
+    background-color: var(--blue-main);
+    background: radial-gradient(circle at 80% 70%, var(--pink-main) 5%, transparent 5%),
+                radial-gradient(circle at 45% 0%, var(--pink-main) 5%, transparent 6%),
+                radial-gradient(circle at 59% 45%, var(--pink-main) 6%, transparent 6%),
+                radial-gradient(circle at 10% 50%, var(--pink-main) 4%, transparent 4%),
+                radial-gradient(circle at 35% 85%, var(--pink-main) 8%, transparent 8%),
+                radial-gradient(circle at 95% 0%, var(--pink-main) 5%, var(--blue-main) 5%);
+                box-shadow: inset 0px 3px 3px #FFFFFF, inset 0px -3px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 370px;
+    gap: 15px;
+    padding: 10px 0 0 0;
+}
+
+.pumpkin-img{
+    width: 80px;
+}
+
+.controls-container{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 5px 4px 4px #f1f1f1, -5px -4px 4px #dadbdf;
+
+}
+
+/* controls */
+
+.emotion-radios{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15px ;
+}
+
+.radio{
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-dark);
+    width: 120px;
+    background: var(--pink-main);
+    border-radius: 20px;
+    padding: 12px 0 14px 10px;
+    margin: 8px 0px;
+    transition: 300ms;
+    box-shadow: var(--box-shadow-dark);
+
+}
+
+.emotion-radios input[type="radio"] {
+  opacity: 0.011;
+  z-index: 100;
+}
+
+
+.highlight{
+    background-color: var(--background);
+    color: var(--pink-main);
+    font-weight: bold;
+    box-shadow: 3px 3px 6px #FFFFFF, -3px -3px 6px #C4C7D4;}
+
+input[type="radio"]{
+    cursor: pointer;
+}
+.gif-and-get {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gifs-check{
+    width: 75%;
+    display: flex;
+    align-items: center;
+   justify-content: space-evenly;
+    margin: 35px auto;
+    border-radius: 15px;
+    box-shadow: 5px 4px 4px #f1f1f1, -5px -4px 4px #dadbdf;
+}
+label{
+    width: 100%;
+    cursor: pointer;
+    padding: 2px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background: #DADBDF;
+    box-shadow: 3px 3px 3px #FFFFFF, -2px -2px 3px #D2D3D7;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 1px;
+    bottom: 0;
+    border-radius: 50%;
+    background: #B0B0B0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.51), 
+    inset -1px -4px 2px rgba(0, 0, 0, 0.17), inset 1px 2px 2px rgba(218, 219, 223, 0.88);    
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background-color: var(--blue-main);
+    box-shadow: 3px 3px 4px #FFFFFF, -2px -2px 4px #B0B0B0;
+
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(39px);
+    -ms-transform: translateX(39px);
+    transform: translateX(39px);
+    background: var(--pink-main);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.51), 
+    inset -1px -4px 2px rgba(0, 0, 0, 0.17), inset 1px 2px 2px #DADBDF;
+
+  }
+
+
+.get-image-btn{
+    background-color: var(--blue-main);
+    color: var(--text-light);
+    padding: 15px 19px;
+    font-size: 22px;
+    font-family: Rowdies, sans-serif;
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    transition: 300ms;
+    box-shadow: var(--box-shadow-dark);
+    }
+.get-image-btn:hover {
+    background-color: var(--blue-light);
+    color: var(--text-dark);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25), 
+    inset -2px -2px 3px rgba(0, 0, 0, 0.25), inset 2px 3px 3px #FFFFFF;
+    }
+.get-image-btn:disabled {
+     opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* modal */
+
+.meme-modal{
+    display: none; /*flex when displayed*/
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    width: 520px;
+    height: 100%;
+    background-color: rgb(231, 230, 247, .7);
+      backdrop-filter: blur(2px);
+     animation:bounce-in-top 1.5s both;
+}
+@keyframes bounce-in-top{0%{transform:translateY(-500px);animation-timing-function:ease-in;opacity:0}38%{transform:translateY(0);animation-timing-function:ease-out;opacity:1}55%{transform:translateY(-65px);animation-timing-function:ease-in}72%{transform:translateY(0);animation-timing-function:ease-out}81%{transform:translateY(-28px);animation-timing-function:ease-in}90%{transform:translateY(0);animation-timing-function:ease-out}95%{transform:translateY(-8px);animation-timing-function:ease-in}100%{transform:translateY(0);animation-timing-function:ease-out}
+}
+
+
+
+.cat-img{
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 20px;
+}
+
+.meme-modal-close-btn{
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    background-color: var(--pink-main);
+    border-radius: 50%;
+    border: none;
+    padding: 7px 16px;
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: var(--box-shadow-dark);
+}
+
+.meme-modal-close-btn:hover{
+    color: var(--blue-main);
+    background: #FFC2F5;
+    box-shadow: inset -2px -2px 3px rgba(0, 0, 0, 0.25), 
+    inset 2px 2px 3px rgba(255, 255, 255, 0.78);
+}
